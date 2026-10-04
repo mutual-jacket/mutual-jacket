@@ -1,42 +1,22 @@
-# sv
+# Thanks for checking out Marko
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# Installation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
 ```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-pnpm dlx sv@0.12.8 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography" paraglide="languageTags:en+demo:yes" --install pnpm mutual-jacket
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+npm init marko -- --template basic
+cd marko-app
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Overview
 
-To create a production version of your app:
+This project is powered by [@marko/run](https://github.com/marko-js/run).
 
-```sh
-npm run build
-```
+- Run `npm run dev` to start the development server
+- Run `npm run build` to build a production-ready node.js server
+- Run `npm run preview` to run the production server
 
-You can preview the production build with `npm run preview`.
+## Adding Pages
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Pages map to the directory structure. You can add additional pages by creating files/directories under `src/routes` with `+page.marko` files. Learn more in the [`@marko/run` docs](https://github.com/marko-js/run/#file-based-routing).
